@@ -46,8 +46,11 @@ def plot_radar(players, columns, title, data):
     ax.set_theta_offset(np.pi / 2)
     ax.set_theta_direction(-1)
 
+    # Clean the labels for display (remove prefixes)
+    display_labels = [col.replace("cat.", "").replace("player_season_", "").replace("_", " ").title() for col in columns]
+
     ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(columns, color='grey', size=12)
+    ax.set_xticklabels(display_labels, color='grey', size=12)
 
     ax.set_rlabel_position(30)
     ax.set_yticks([20, 40, 60, 80, 100])
