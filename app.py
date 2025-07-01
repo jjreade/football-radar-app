@@ -14,7 +14,7 @@ data = load_data()
 
 # --- Player selection ---
 player_options = data['player_name'].dropna().unique()
-selected_players = st.multiselect("Select up to two players", player_options, max_selections=2)
+selected_players = st.multiselect("Select up to three players", player_options, max_selections=3)
 
 if len(selected_players) == 0:
     st.warning("Please select at least one player to show radar plots.")
