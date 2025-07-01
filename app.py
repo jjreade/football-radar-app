@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 @st.cache_data
 def load_data():
     # Replace with your file path
-    df = pd.read_csv("/Users/jjreade/Dropbox/Research/Sport/OAFC/data/analysis-data/all-player-seasons-metrics.csv")
+    df = pd.read_csv("all-player-seasons-metrics.csv")
     return df
 
 data = load_data()
